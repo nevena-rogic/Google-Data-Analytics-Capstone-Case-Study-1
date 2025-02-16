@@ -1,4 +1,4 @@
-Data Exploration
+--Data Exploration
 
 --Checking for number of null values in all columns
 SELECT 
