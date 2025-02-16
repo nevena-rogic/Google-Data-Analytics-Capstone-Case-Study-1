@@ -58,3 +58,34 @@ understand how casual riders and annual members use Cyclistic bikes dierently. F
 insights, my team will design a new marketing strategy to convert casual riders into annual
 members. But first, Cyclistic executives must approve our recommendations, so they must be
 backed up with compelling data insights and professional data visualizations.
+
+## Ask
+### Business task
+Development of marketing strategies to convert casual riders to members.
+### Data Analysis Questions
+Three questions will guide the future marketing program:
+1. How do annual members and casual riders use Cyclistic bikes differently?
+2. Why would casual riders buy Cyclistic annual memberships?
+3. How can Cyclistic use digital media to influence casual riders to become members?
+
+Moreno has assigned me the first question to answer: How do annual members and casual riders use Cyclistic bikes differently?
+
+## Prepare
+I will use Cyclistic’s historical trip data to analyze and identify trends from Jan 2024 to Dec 2024. Data is downloaded from 
+[divvy_tripdata](https://divvy-tripdata.s3.amazonaws.com/index.html). The data has been made available by
+Motivate International Inc. under this [license](https://www.divvybikes.com/data-license-agreement). 
+
+This is public data that can be used to explore
+how different customer types are using Cyclistic bikes. But note that data-privacy issues
+prohibit from using riders’ personally identiable information. This means that we won’t be
+able to connect pass purchases to credit card numbers to determine if casual riders live in the
+Cyclistic service area or if they have purchased multiple single passes.
+
+### Data Organization
+There are 12 files with naming convention of YYYYMM-divvy-tripdata and each file includes information for one month, which corresponds with the names of the column: ride_id, rideable_type, started_at, ended_at, start_station_name, start_station_id, end_station_name, end_station_id, start_lat, start_lng, end_lat, end_lng and member_casual.
+
+## Process
+**SSMS** is used for combining, exploration and cleaning of the data.
+
+**Reason**: Cyclistic dataset has more than 5.86 millions of rows, and because Microsoft Excel is unable to manage large ammounts of data (the maximum number of rows that a worksheet can support is 1,048,576 rows), it is reasonable to use such platform like SSMS is.
+
