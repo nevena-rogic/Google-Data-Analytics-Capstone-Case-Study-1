@@ -97,20 +97,41 @@ SQL Query: [Data Combining](https://github.com/nevena-rogic/Google-Data-Analytic
 ### Data Exploration
 SQL Query: [Data Exploration](https://github.com/nevena-rogic/Google-Data-Analytics-Capstone-Case-Study-1/blob/main/2.%20Data%20Exploration.sql)
 
-In order to get introduced to data before cleaning them, I am exploring them.
+In order to get introduced to data before cleaning them, I've explored them.
 
 I have concluded following facts:
 
 1. The following table shows number of null values in each column:
    ![image](https://github.com/nevena-rogic/slike-case-study-1/blob/main/slika1.PNG)
 
-2. Checking the ride_id for duplicate values, as it doesn't have null values: 
+2. Checking the **ride_id** for duplicate values, as it doesn't have null values: 
 
    ![image](https://github.com/nevena-rogic/slike-case-study-1/blob/main/slika2.PNG)
 
-   There are 211 duplicate rows found.
+   There are **211 duplicate** rows found.
 
-3. 
+3. **Ride_id** column. Length of all values in this column is 16, so there is no need for cleaning.
+
+4. **Rideable_type** column. There are 3 unique types of bikes in our data.
+   
+   ![image](https://github.com/nevena-rogic/slike-case-study-1/blob/main/slika3.PNG)
+
+5. **Ride_length** column. New column ride_length can be created based on the values of existing columns started_at and ended_at. There 
+   are 7490 rides with a duration longer then a day, and 131256 rides that lasted less then a minute, and they will be excluded during 
+   data cleaning process.
+
+6. Other two columns that may be created are **day_of_week** and **month**.
+
+7. **Start_station_name** and **start_station_id** columns. There are 1073951 missing rows in either of these columns which need to be 
+   excluded.
+
+8. **End_station_name** and **end_station_id** columns. There are 1104653 missing rows in either of these columns which need to be 
+   excluded.
+
+9. **Member_casual** column. This column contains 2 unique types of customers.
+
+### Data Cleaning
+SQL Query: 
 
 
  
