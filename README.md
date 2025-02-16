@@ -130,8 +130,18 @@ I have concluded following facts:
 
 9. **Member_casual** column. This column contains 2 unique types of customers.
 
+10. **Start_station_id** and **end_station_id** columns. These columns needs to be excluded since they do not add values to our analysis.
+
 ### Data Cleaning
-SQL Query: 
+SQL Query: [Data Cleaning](https://github.com/nevena-rogic/Google-Data-Analytics-Capstone-Case-Study-1/blob/main/3.%20Data%20Cleaning.sql)
+1. 3 new columns are created: **ride_length**, **day_of_week** and **month**.
+2. All the rows having missing values are excluded.
+3. Trips that lasted longer then a day, or less then a minute are excluded.
+4. All the duplicate rows from the **ride_id** column are excluded.
+5. **Ride_id** column is set as primary key.
+6. New cleaned table 2024_tripdata.cleaned_combined_data is created, counting 4138022 of rows.
+
+
 
 
  
