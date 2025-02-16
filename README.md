@@ -89,3 +89,29 @@ There are 12 files with naming convention of YYYYMM-divvy-tripdata and each file
 
 **Reason**: Cyclistic dataset has more than 5.86 millions of rows, and because Microsoft Excel is unable to manage large ammounts of data (the maximum number of rows that a worksheet can support is 1,048,576 rows), it is reasonable to use such platform like SSMS is.
 
+### Data Combining
+SQL Query: [Data Combining](https://github.com/nevena-rogic/Google-Data-Analytics-Capstone-Case-Study-1/blob/main/1.%20Data%20Combining.sql)
+
+12 csv files are uploaded and imported as tables in the datasets formatted as '2024_tripdata'. The table named '2024_tripdata.combined_data' is created, and contains 5860568 of rows.
+
+### Data Exploration
+SQL Query: [Data Exploration](https://github.com/nevena-rogic/Google-Data-Analytics-Capstone-Case-Study-1/blob/main/2.%20Data%20Exploration.sql)
+
+In order to get introduced to data before cleaning them, I am exploring them.
+
+I have concluded following facts:
+
+1. The following table shows number of null values in each column:
+   ![image](https://github.com/nevena-rogic/slike-case-study-1/blob/main/slika1.PNG)
+
+2. Checking the ride_id for duplicate values, as it doesn't have null values: 
+
+   ![image](https://github.com/nevena-rogic/slike-case-study-1/blob/main/slika2.PNG)
+
+   There are 211 duplicate rows found.
+
+3. 
+
+
+ 
+
