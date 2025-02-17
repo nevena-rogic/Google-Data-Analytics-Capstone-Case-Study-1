@@ -155,9 +155,9 @@ I queried 2024_tripdata.cleaned_combined_data and did a visualization in Tableau
     ![image](https://github.com/nevena-rogic/slike-case-study-1/blob/main/slika4.PNG)
 
 3. Next slides show distribution of rides per month, day of the week, and an hour of a day by users.
-   ![image](https://github.com/nevena-rogic/slike-case-study-1/blob/main/slika6.PNG)
-   ![image](https://github.com/nevena-rogic/slike-case-study-1/blob/main/slika7.PNG)
-   
+   ![image](https://github.com/nevena-rogic/slike-case-study-1/blob/main/slika9.PNG)
+   ![image](https://github.com/nevena-rogic/slike-case-study-1/blob/main/slika10.PNG)
+   ![image](https://github.com/nevena-rogic/slike-case-study-1/blob/main/slika8.PNG)
     
 
 
