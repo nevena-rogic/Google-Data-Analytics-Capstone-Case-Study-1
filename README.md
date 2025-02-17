@@ -150,7 +150,11 @@ I queried 2024_tripdata.cleaned_combined_data and did a visualization in Tableau
 1. The following slide shows the distribution of users during 2024.
     ![image](https://github.com/nevena-rogic/slike-case-study-1/blob/main/slika5.PNG)
    
-2. Member and casual riders are compared by the type of bikes they are using.
+2. This slide shows the comparation of member and casual riders by the type of bikes they are using.
+    ![image](https://github.com/nevena-rogic/slike-case-study-1/blob/main/slika4.PNG)
+
+3. 
+    
 
 
  
