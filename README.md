@@ -141,7 +141,16 @@ SQL Query: [Data Cleaning](https://github.com/nevena-rogic/Google-Data-Analytics
 5. **Ride_id** column is set as primary key.
 6. New cleaned table 2024_tripdata.cleaned_combined_data is created, counting 4138022 of rows.
 
+## Analyze and Share
+SQL Query: 
+Data Visualization: Tableau
 
+I queried 2024_tripdata.cleaned_combined_data and did a visualization in Tableau.
+
+1. The following slide shows the distribution of users during 2024.
+    ![image](https://github.com/nevena-rogic/slike-case-study-1/blob/main/slika5.PNG)
+   
+2. Member and casual riders are compared by the type of bikes they are using.
 
 
  
