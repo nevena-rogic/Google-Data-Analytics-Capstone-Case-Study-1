@@ -120,4 +120,28 @@ ORDER BY
     hour_of_day,  -- Ensures hours are in ascending order for a proper line graph
     member_casual  -- Keeps casual and member data grouped separately
 
---
+--start stations
+SELECT 
+    start_station_name, 
+    member_casual, 
+    AVG(CAST(start_lat AS FLOAT)) AS start_lat, 
+    AVG(CAST(start_lng AS FLOAT)) AS start_lng, 
+    COUNT(ride_id) AS total_trips
+FROM 
+    [2024_tripdata.cleaned_combined_data]
+GROUP BY 
+    start_station_name, 
+    member_casual
+
+--end stations
+SELECT 
+    end_station_name, 
+    member_casual, 
+    AVG(CAST(end_lat AS FLOAT)) AS end_lat, 
+    AVG(CAST(end_lng AS FLOAT)) AS end_lng, 
+    COUNT(ride_id) AS total_trips
+FROM 
+    [2024_tripdata.cleaned_combined_data]  -- Ensure the correct schema name
+GROUP BY 
+    end_station_name, 
+    member_casual
