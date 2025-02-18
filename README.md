@@ -54,14 +54,14 @@ analyzing the Cyclistic historical bike trip data to identify trends.
 I'm a junior data analyst working on the marketing analyst team at Cyclistic, a bike-share
 company in Chicago. The director of marketing believes the company’s future success
 depends on maximizing the number of annual memberships. Therefore, my team wants to
-understand how casual riders and annual members use Cyclistic bikes dierently. From these
+understand how casual riders and annual members use Cyclistic bikes differently. From these
 insights, my team will design a new marketing strategy to convert casual riders into annual
 members. But first, Cyclistic executives must approve our recommendations, so they must be
 backed up with compelling data insights and professional data visualizations.
 
 ## Ask
 ### Business task
-Development of marketing strategies to convert casual riders to members.
+Design of marketing strategies to convert casual riders to members.
 ### Data Analysis Questions
 Three questions will guide the future marketing program:
 1. How do annual members and casual riders use Cyclistic bikes differently?
@@ -82,53 +82,51 @@ able to connect pass purchases to credit card numbers to determine if casual rid
 Cyclistic service area or if they have purchased multiple single passes.
 
 ### Data Organization
-There are 12 files with naming convention of YYYYMM-divvy-tripdata and each file includes information for one month, which corresponds with the names of the column: ride_id, rideable_type, started_at, ended_at, start_station_name, start_station_id, end_station_name, end_station_id, start_lat, start_lng, end_lat, end_lng and member_casual.
+There are 12 files with naming convention of YYYYMM-divvy-tripdata and each file includes information for one month, which content corresponds with the names of the column: ride_id, rideable_type, started_at, ended_at, start_station_name, start_station_id, end_station_name, end_station_id, start_lat, start_lng, end_lat, end_lng and member_casual.
 
 ## Process
 **SSMS** is used for combining, exploration and cleaning of the data.
 
-**Reason**: Cyclistic dataset has more than 5.86 millions of rows, and because Microsoft Excel is unable to manage large ammounts of data (the maximum number of rows that a worksheet can support is 1,048,576 rows), it is reasonable to use such platform like SSMS is.
+**Reason**: Cyclistic dataset has more than 5,86 millions of rows, and because Microsoft Excel is unable to manage large ammounts of data (the maximum number of rows that a worksheet can support is 1,048,576 rows), it is reasonable to use such platform like SSMS is.
 
 ### Data Combining
 SQL Query: [Data Combining](https://github.com/nevena-rogic/Google-Data-Analytics-Capstone-Case-Study-1/blob/main/1.%20Data%20Combining.sql)
 
-12 csv files are uploaded and imported as tables in the datasets formatted as '2024_tripdata'. The table named '2024_tripdata.combined_data' is created, and contains 5860568 of rows.
+12 csv files are uploaded and imported as tables in the datasets formatted as '2024_tripdata'. The table named '2024_tripdata.combined_data' is created, and contains 5,860,568 of rows.
 
 ### Data Exploration
 SQL Query: [Data Exploration](https://github.com/nevena-rogic/Google-Data-Analytics-Capstone-Case-Study-1/blob/main/2.%20Data%20Exploration.sql)
 
 In order to get introduced to data before cleaning them, I've explored them.
 
-I have concluded following facts:
+I have noted following facts:
 
-1. The following table shows number of null values in each column:
+1. Number of **null values** in each column is as follows:
    ![image](https://github.com/nevena-rogic/slike-case-study-1/blob/main/slika1.PNG)
 
-2. Checking the **ride_id** for duplicate values, as it doesn't have null values: 
+2. **Ride_id** column. It has been checked for duplicate values, as it doesn't have null values, and **211 duplicate** rows are found.
 
    ![image](https://github.com/nevena-rogic/slike-case-study-1/blob/main/slika2.PNG)
 
-   There are **211 duplicate** rows found.
-
 3. **Ride_id** column. Length of all values in this column is 16, so there is no need for cleaning.
 
-4. **Rideable_type** column. There are 3 unique types of bikes in our data.
+4. **Rideable_type** column. There are 3 unique types of bikes in our dataset.
    
    ![image](https://github.com/nevena-rogic/slike-case-study-1/blob/main/slika3.PNG)
 
 5. **Ride_length** column. New column ride_length can be created based on the values of existing columns started_at and ended_at. There 
-   are 7490 rides with a duration longer then a day, and 131256 rides that lasted less then a minute, and they will be excluded during 
-   data cleaning process.
+   are 7,490 rides with a duration longer then a day, and 131,256 rides that lasted less then a minute, and they will be excluded 
+   during data cleaning process.
 
 6. Other two columns that may be created are **day_of_week** and **month**.
 
-7. **Start_station_name** and **start_station_id** columns. There are 1073951 missing rows in either of these columns which need to be 
+7. **Start_station_name** and **start_station_id** columns. There are 1,073,951 missing rows in either of these columns which need to 
+   be excluded.
+
+8. **End_station_name** and **end_station_id** columns. There are 1,104,653 missing rows in either of these columns which need to be 
    excluded.
 
-8. **End_station_name** and **end_station_id** columns. There are 1104653 missing rows in either of these columns which need to be 
-   excluded.
-
-9. **Member_casual** column. This column contains 2 unique types of customers.
+9. **Member_casual** column. This column contains 2 unique types of users.
 
 10. **Start_station_id** and **end_station_id** columns. These columns needs to be excluded since they do not add values to our analysis.
 
@@ -139,19 +137,19 @@ SQL Query: [Data Cleaning](https://github.com/nevena-rogic/Google-Data-Analytics
 3. Trips that lasted longer then a day, or less then a minute are excluded.
 4. All the duplicate rows from the **ride_id** column are excluded.
 5. **Ride_id** column is set as primary key.
-6. New cleaned table 2024_tripdata.cleaned_combined_data is created, counting 4138022 of rows.
+6. New cleaned table 2024_tripdata.cleaned_combined_data is created, counting 4,138,022 of rows.
 
 ## Analyze and Share
 SQL Query: [Data Analysis](https://github.com/nevena-rogic/Google-Data-Analytics-Capstone-Case-Study-1/blob/main/4.%20Data%20Analysis.sql)
 
 Data Visualization: Tableau
 
-I queried 2024_tripdata.cleaned_combined_data and did a visualization in Tableau. In the following are observations.
+I queried 2024_tripdata.cleaned_combined_data and created visualizations in Tableau, and observations are in the following:
 
 1. The following slide shows the distribution of users during 2024.
     ![image](https://github.com/nevena-rogic/slike-case-study-1/blob/main/slika5.PNG)
 
-   There is 63.79% of member users, and 36.21% casual users.
+   There are 63,79% of member users, and 36,21% of casual users.
    
 3. This slide shows the comparation of member and casual riders by the type of bikes they are using.
     ![image](https://github.com/nevena-rogic/slike-case-study-1/blob/main/slika4.PNG)
@@ -165,10 +163,10 @@ I queried 2024_tripdata.cleaned_combined_data and did a visualization in Tableau
    ![image](https://github.com/nevena-rogic/slike-case-study-1/blob/main/slika11.PNG)
    ![image](https://github.com/nevena-rogic/slike-case-study-1/blob/main/slika8.PNG)
 
-   **Per month**: Both casual riders and members show similar patterns in their monthly trips, with higher trip numbers during the 
+   **Per month**: Both casual users and members show similar patterns in their monthly trips, with higher trip numbers during the 
    spring and summer months and a decline in the winter.
 
-   **Per day of week**: When comparing days of the week, it is observed that casual riders take more trips on weekends, whereas members 
+   **Per day of week**: When comparing days of the week, it is observed that casual users take more trips on weekends, whereas members 
    tend to ride less on weekends compared to weekdays.
 
    **Per hour**: Members show two peak periods in the number of trips throughout the day: one in the morning between 6 AM and 9 AM and 
@@ -186,27 +184,27 @@ I queried 2024_tripdata.cleaned_combined_data and did a visualization in Tableau
 
    It is important to note that casual riders generally cycle for longer periods than members on average. While the average ride 
    duration for members remains relatively consistent throughout the year, week, and day, casual riders show more variation in their 
-   cycling patterns. They tend to have longer trips during the spring and summer months, on weekends, and between 10 am and 2 pm each 
-   day. In contrast, casual riders take shorter trips between 5 am and 8 am.
+   cycling patterns. They tend to have longer trips during the spring and summer months, on weekends, and between 10 AM and 2 PM each 
+   day. In contrast, casual riders take shorter trips between 5 AM and 8 AM.
 
-7. Next slides shows the analysis of locations of starting and ending stations by users.
+7. Next slides show the analysis of locations of starting and ending stations by users.
    ![image](https://github.com/nevena-rogic/slike-case-study-1/blob/main/slika18.PNG) ![image](https://github.com/nevena-rogic/slike-case-study-1/blob/main/slika19.PNG)
    ![image](https://github.com/nevena-rogic/slike-case-study-1/blob/main/slika16.PNG) ![image](https://github.com/nevena-rogic/slike-case-study-1/blob/main/slika17.PNG)
 
    In these 4 slides, the distribution of the starting and ending points of the rides is clearly visible.
 
 ## Act
-Based on the analysis of behavior of users, some marketing strategies for converting casual riders into members are as follows::
+Based on the analysis of behavior of users, some marketing strategies for converting casual riders into members are as follows:
 
 1. **Seasonal Membership Offers**: Since casual riders are most active during the spring and summer months, discounted or special memberships could be offered during this period. 
 
-2. **Weekend Promotions**: Casual riders tend to cycle more on weekends, so exclusive weekend deals could be introduced, such as "Weekend Rider Offer: Sign up for a membership this weekend and get 10% off for the first 3 months!" or "Weekend Pass: Unlimited weekend rides for members with special perks like early-bird access to bikes."
+2. **Weekend Promotions**: Casual riders tend to cycle more on weekends, so exclusive weekend deals could be introduced, such as "Weekend Rider Offer: Sign up for a membership this weekend and get 10% off for the first 3 months!".
 
 3. **Location-Based Campaigns**: The data from the map can be used to target the most popular starting and ending locations. Location-based marketing campaigns could be implemented, offering promotions like "Join us at [popular location] and get a free ride or a discount on your first month of membership!" or setting up kiosks at these high-traffic areas where casual riders frequent.
 
 4. **Membership Cards and Loyalty Programs**: A membership card that allows riders to collect points based on the number of trips or total ride duration can be introduced. Rewards such as free rides, discounts on renewals, or exclusive access to events can be offered. For example, "Earn points with every ride and unlock discounts or special perks with our membership card!"
 
-5. **Time-Sensitive Offers for Peak Hours**: Casual riders are more likely to ride in the early evening and between 10 am and 2 pm, so time-limited offers targeting those specific hours can be created. For example, "Sign up before 2 pm today and get a 20% discount on your membership for the next 3 months!" or "Ride during peak hours and get double points for membership rewards!"
+5. **Time-Sensitive Offers for Peak Hours**: Casual riders are more likely to ride in the early evening and between 10 am and 2 pm, so time-limited offers targeting those specific hours can be created. For example, "Sign up before 2 pm today and get a 20% discount on your membership for the next 3 months!" or "Ride during peak hours and get double points for membership rewards!".
 
  
 
