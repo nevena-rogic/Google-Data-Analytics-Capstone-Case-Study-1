@@ -1,4 +1,5 @@
 --Data Combining
+
 --create table of combined data
 CREATE TABLE [dbo].[2024_tripdata.combined_data](
 	[ride_id] [nvarchar](50) NOT NULL,
