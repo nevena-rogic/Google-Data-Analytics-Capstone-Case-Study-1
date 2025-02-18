@@ -60,3 +60,64 @@ GROUP BY
     member_casual
 ORDER BY 
     hour_of_day, member_casual
+
+--duration of a ride per month
+SELECT TOP 100
+    month, 
+    member_casual, 
+    AVG(ride_length) AS avg_ride_duration
+FROM [2024_tripdata.cleaned_combined_data]
+GROUP BY month, member_casual
+ORDER BY member_casual,
+    CASE month
+        WHEN 'JAN' THEN 1
+        WHEN 'FEB' THEN 2
+        WHEN 'MAR' THEN 3
+        WHEN 'APR' THEN 4
+        WHEN 'MAY' THEN 5
+        WHEN 'JUN' THEN 6
+        WHEN 'JUL' THEN 7
+        WHEN 'AUG' THEN 8
+        WHEN 'SEP' THEN 9
+        WHEN 'OCT' THEN 10
+        WHEN 'NOV' THEN 11
+        WHEN 'DEC' THEN 12
+    END
+
+--duration of a ride per day of week
+SELECT TOP 100
+    day_of_week, 
+    member_casual, 
+    AVG(ride_length) AS avg_ride_duration
+FROM 
+    [2024_tripdata.cleaned_combined_data]
+GROUP BY 
+    day_of_week, 
+    member_casual
+ORDER BY 
+    member_casual,  -- First, order by member type
+    CASE day_of_week  -- Then, order days in correct sequence
+        WHEN 'SUN' THEN 1
+		WHEN 'MON' THEN 2
+        WHEN 'TUES' THEN 3
+        WHEN 'WED' THEN 4
+        WHEN 'THURS' THEN 5
+        WHEN 'FRI' THEN 6
+        WHEN 'SAT' THEN 7
+    END
+
+--duration of a ride per hour
+SELECT TOP 100
+    DATEPART(HOUR, started_at) AS hour_of_day, 
+    member_casual, 
+    AVG(ride_length) AS avg_ride_duration
+FROM 
+    [2024_tripdata.cleaned_combined_data]
+GROUP BY  
+    DATEPART(HOUR, started_at), 
+    member_casual
+ORDER BY  
+    hour_of_day,  -- Ensures hours are in ascending order for a proper line graph
+    member_casual  -- Keeps casual and member data grouped separately
+
+--
