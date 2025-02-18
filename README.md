@@ -142,11 +142,11 @@ SQL Query: [Data Cleaning](https://github.com/nevena-rogic/Google-Data-Analytics
 6. New cleaned table 2024_tripdata.cleaned_combined_data is created, counting 4138022 of rows.
 
 ## Analyze and Share
-SQL Query: 
+SQL Query: [Data Analysis](https://github.com/nevena-rogic/Google-Data-Analytics-Capstone-Case-Study-1/blob/main/4.%20Data%20Analysis.sql)
 
 Data Visualization: Tableau
 
-I queried 2024_tripdata.cleaned_combined_data and did a visualization in Tableau.
+I queried 2024_tripdata.cleaned_combined_data and did a visualization in Tableau. In the following are observations.
 
 1. The following slide shows the distribution of users during 2024.
     ![image](https://github.com/nevena-rogic/slike-case-study-1/blob/main/slika5.PNG)
@@ -189,10 +189,24 @@ I queried 2024_tripdata.cleaned_combined_data and did a visualization in Tableau
    cycling patterns. They tend to have longer trips during the spring and summer months, on weekends, and between 10 am and 2 pm each 
    day. In contrast, casual riders take shorter trips between 5 am and 8 am.
 
-7. Next slides shows the analysis of locations of starting and ending stations.
+7. Next slides shows the analysis of locations of starting and ending stations by users.
+   ![image](https://github.com/nevena-rogic/slike-case-study-1/blob/main/slika18.PNG) ![image](https://github.com/nevena-rogic/slike-case-study-1/blob/main/slika19.PNG)
+   ![image](https://github.com/nevena-rogic/slike-case-study-1/blob/main/slika16.PNG) ![image](https://github.com/nevena-rogic/slike-case-study-1/blob/main/slika17.PNG)
 
-    
+   In these 4 slides, the distribution of the starting and ending points of the rides is clearly visible.
 
+## Act
+Based on the analysis of behavior of users, some marketing strategies for converting casual riders into members are as follows::
+
+1. **Seasonal and Weekend Promotions**: Discounted membership rates or free trial periods could be offered during peak seasons (spring and summer) and weekends, when casual riders are most active. Special weekend-only offers or free ride days for new members could be provided to encourage sign-ups.
+
+2. **Location-Based Campaigns**: The most popular riding areas are targeted, using insights from the map to provide promotions or set up sign-up booths in high-traffic locations. Collaborations with local businesses could be arranged to offer membership discounts or rewards.
+
+3. **Reward-Based Loyalty Program**: A points-based loyalty system could be introduced, allowing casual riders to earn points for each ride, which can be redeemed for membership discounts or free rides. Bonus points are awarded for converting to a full membership.
+
+4. **Highlight Cost and Membership Benefits**: The long-term savings of membership could be promoted by comparing the cost of individual rides with membership fees. Exclusive perks such as priority bike access and longer ride durations are emphasized for members.
+
+5. **Engaging Through Digital and Referral Campaigns**: Social media and email campaigns could be used to share success stories and limited-time offers. A referral program could be created where current members can earn rewards for referring casual riders, encouraging word-of-mouth promotion.
 
  
 
