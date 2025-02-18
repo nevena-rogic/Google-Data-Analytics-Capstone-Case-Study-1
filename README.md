@@ -180,7 +180,18 @@ I queried 2024_tripdata.cleaned_combined_data and did a visualization in Tableau
    spring and summer months.
    
 6. Next slides show duration of rides per month, day of week, and hour of a day by users.
+   ![image](https://github.com/nevena-rogic/slike-case-study-1/blob/main/slika12.PNG)
+   ![image](https://github.com/nevena-rogic/slike-case-study-1/blob/main/slika13.PNG)
+   ![image](https://github.com/nevena-rogic/slike-case-study-1/blob/main/slika14.PNG)
 
+   It is important to note that casual riders generally cycle for longer periods than members on average. While the average ride 
+   duration for members remains relatively consistent throughout the year, week, and day, casual riders show more variation in their 
+   cycling patterns. They tend to have longer trips during the spring and summer months, on weekends, and between 10 am and 2 pm each 
+   day. In contrast, casual riders take shorter trips between 5 am and 8 am.
+
+7. Next slides shows the analysis of locations of starting and ending stations.
+
+    
 
 
  
