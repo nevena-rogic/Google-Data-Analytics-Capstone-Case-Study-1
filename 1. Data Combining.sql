@@ -1,4 +1,5 @@
---Create table of combined data
+--Data Combining
+--create table of combined data
 CREATE TABLE [dbo].[2024_tripdata.combined_data](
 	[ride_id] [nvarchar](50) NOT NULL,
 	[rideable_type] [nvarchar](50) NOT NULL,
@@ -16,7 +17,7 @@ CREATE TABLE [dbo].[2024_tripdata.combined_data](
 ) ON [PRIMARY] TEXTIMAGE_ON [PRIMARY]
 GO
 
---Merge all data (combine the data from tables for 12 months, in order to get one table for a 2024 year)
+--merge all data (combine the data from tables for 12 months, in order to get one table for a 2024 year)
 INSERT INTO [2024_tripdata.combined_data] ([ride_id]
            ,[rideable_type]
            ,[started_at]
@@ -55,7 +56,7 @@ INSERT INTO [2024_tripdata.combined_data] ([ride_id]
   SELECT * FROM [2024_tripdata.202412_tripdata]
 ;
 
---Checking number of rows which is 5860568
+--checking number of rows which is 5860568
 SELECT COUNT(*)
 FROM [2024_tripdata.combined_data];
 
