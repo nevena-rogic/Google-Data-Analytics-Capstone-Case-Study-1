@@ -1,4 +1,5 @@
 --Data Analysis
+
 --bikes types used by riders
 SELECT TOP 100
     member_casual,          -- Type of rider (member or casual)
