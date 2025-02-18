@@ -1,9 +1,9 @@
 # Google Data Analytics Capstone: Case Study 1
 Course: [Google Data Analytics Capstone: Complete a Case Study](https://www.coursera.org/learn/google-data-analytics-capstone)
-## Introduction
+## Basics
 In this case study, I'm a junior data analyst who works for a fictional company, Cyclistic, along with some key team members. In order to answer the
 business questions, I will be following the steps of the data analysis process: Ask, Prepare, Process, Analyze, Share, and Act.
-## Background
+## Settings
 ### Characters and teams
 **Cyclistic**: A bike-share program that features more than 5,800 bicycles and 600
 docking stations. Cyclistic sets itself apart by also offering reclining bikes, hand
@@ -150,16 +150,38 @@ I queried 2024_tripdata.cleaned_combined_data and did a visualization in Tableau
 
 1. The following slide shows the distribution of users during 2024.
     ![image](https://github.com/nevena-rogic/slike-case-study-1/blob/main/slika5.PNG)
+
+   There is 63.79% of member users, and 36.21% casual users.
    
-2. This slide shows the comparation of member and casual riders by the type of bikes they are using.
+3. This slide shows the comparation of member and casual riders by the type of bikes they are using.
     ![image](https://github.com/nevena-rogic/slike-case-study-1/blob/main/slika4.PNG)
 
-3. Next slides show distribution of rides per month, day of the week, and hour of a day by users.
+   The values displayed in these 3 charts represent the distribution of total trips, expressed as a percentage of the overall 
+   dataset. The most frequently used bike types, in descending order, are classic bikes, folowed by the electric bikes, and electric
+   scooters. 
+
+5. Next slides show distribution of rides per month, day of the week, and hour of a day by users.
    ![image](https://github.com/nevena-rogic/slike-case-study-1/blob/main/slika9.PNG)
    ![image](https://github.com/nevena-rogic/slike-case-study-1/blob/main/slika11.PNG)
    ![image](https://github.com/nevena-rogic/slike-case-study-1/blob/main/slika8.PNG)
-    
-4. 
+
+   **Per month**: Both casual riders and members show similar patterns in their monthly trips, with higher trip numbers during the 
+   spring and summer months and a decline in the winter.
+
+   **Per day of week**: When comparing days of the week, it is observed that casual riders take more trips on weekends, whereas members 
+   tend to ride less on weekends compared to weekdays.
+
+   **Per hour**: Members show two peak periods in the number of trips throughout the day: one in the morning between 6 AM and 9 AM and 
+   another in the late afternoon and early evening from around 4 PM to 7 PM. In contrast, the number of trips taken by casual riders 
+   increases steadily throughout the day, reaching a peak in the early evening before declining afterward.
+
+   These observations suggest that members primarily use bikes for commuting to and from work on weekdays, whereas casual riders tend 
+   to ride throughout the day, especially on weekends, likely for leisure. Both groups show the highest activity levels during the 
+   spring and summer months.
+   
+6. Next slides show duration of rides per month, day of week, and hour of a day by users.
+
+
 
  
 
