@@ -1,6 +1,6 @@
 --Data Cleaning
 
---Create a new table with the cleaned and filtered data -4138143 rows
+--create a new table with the cleaned and filtered data -4138143 rows
 SELECT 
     ride_id, 
     rideable_type, 
@@ -47,23 +47,23 @@ WHERE
     DATEDIFF(MINUTE, started_at, ended_at) > 1 AND -- Filter for rides longer than 1 minute
     DATEDIFF(MINUTE, started_at, ended_at) < 1440; -- Filter for rides shorter than 24 hours (1440 minutes)
 
---Setting primary key 
---Deleting duplicate ride_id rows-121 rows
---Use a CTE to identify duplicates
+--setting primary key 
+--deleting duplicate ride_id rows-121 rows
+--use a CTE to identify duplicates
 WITH CTE AS (
     SELECT 
         ride_id,
         ROW_NUMBER() OVER (PARTITION BY ride_id ORDER BY ride_id) AS row_num
     FROM [2024_tripdata.cleaned_combined_data]
 )
---Delete rows where row_num > 1 (i.e., duplicates)
+--delete rows where row_num > 1 (i.e., duplicates)
 DELETE FROM CTE
 WHERE row_num > 1;
 --Setting primary key
 ALTER TABLE [2024_tripdata.cleaned_combined_data]
 ADD CONSTRAINT [PK_2024_tripdata.cleaned_combined_data] PRIMARY KEY (ride_id);
 
---Counting number of rows
+--counting number of rows
 no_of_rows
 4138022
 SELECT COUNT(ride_id) AS no_of_rows
