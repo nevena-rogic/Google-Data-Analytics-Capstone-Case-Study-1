@@ -82,7 +82,7 @@ able to connect pass purchases to credit card numbers to determine if casual rid
 Cyclistic service area or if they have purchased multiple single passes.
 
 ### Data Organization
-There are 12 files with naming convention of YYYYMM-divvy-tripdata and each file includes information for one month, which content corresponds with the names of the column: ride_id, rideable_type, started_at, ended_at, start_station_name, start_station_id, end_station_name, end_station_id, start_lat, start_lng, end_lat, end_lng and member_casual.
+There are 12 files, each following the naming convention of YYYYMM-divvy-tripdata, with each file representing data for a single month. The contents of these files correspond to the following columns: ride_id, rideable_type, started_at, ended_at, start_station_name, start_station_id, end_station_name, end_station_id, start_lat, start_lng, end_lat, end_lng, and member_casual.
 
 ## Process
 **SSMS** is used for combining, exploration and cleaning of the data.
@@ -92,19 +92,19 @@ There are 12 files with naming convention of YYYYMM-divvy-tripdata and each file
 ### Data Combining
 SQL Query: [Data Combining](https://github.com/nevena-rogic/Google-Data-Analytics-Capstone-Case-Study-1/blob/main/1.%20Data%20Combining.sql)
 
-12 csv files are uploaded and imported as tables in the datasets formatted as '2024_tripdata'. The table named '2024_tripdata.combined_data' is created, and contains 5,860,568 of rows.
+12 CSV files are uploaded and imported as tables in the datasets formatted as '2024_tripdata'. The table named '2024_tripdata.combined_data' is created, and contains 5,860,568 of rows.
 
 ### Data Exploration
 SQL Query: [Data Exploration](https://github.com/nevena-rogic/Google-Data-Analytics-Capstone-Case-Study-1/blob/main/2.%20Data%20Exploration.sql)
 
 In order to get introduced to data before cleaning them, I've explored them.
 
-I have noted following facts:
+I have noted following:
 
-1. Number of **null values** in each column is as follows:
+1. Number of **null values** in each column is shown in the following table:
    ![image](https://github.com/nevena-rogic/slike-case-study-1/blob/main/slika1.PNG)
 
-2. **Ride_id** column. It has been checked for duplicate values, as it doesn't have null values, and **211 duplicate** rows are found.
+2. **Ride_id** column. It has been checked for duplicate values, as it doesn't have null values, and **211 duplicate** rows were found.
 
    ![image](https://github.com/nevena-rogic/slike-case-study-1/blob/main/slika2.PNG)
 
@@ -134,7 +134,7 @@ I have noted following facts:
 SQL Query: [Data Cleaning](https://github.com/nevena-rogic/Google-Data-Analytics-Capstone-Case-Study-1/blob/main/3.%20Data%20Cleaning.sql)
 1. 3 new columns are created: **ride_length**, **day_of_week** and **month**.
 2. All the rows having missing values are excluded.
-3. Trips that lasted longer then a day, or less then a minute are excluded.
+3. Trips that lasted longer then a day or less then a minute are excluded.
 4. All the duplicate rows from the **ride_id** column are excluded.
 5. **Ride_id** column is set as primary key.
 6. New cleaned table 2024_tripdata.cleaned_combined_data is created, counting 4,138,022 of rows.
@@ -142,16 +142,16 @@ SQL Query: [Data Cleaning](https://github.com/nevena-rogic/Google-Data-Analytics
 ## Analyze and Share
 SQL Query: [Data Analysis](https://github.com/nevena-rogic/Google-Data-Analytics-Capstone-Case-Study-1/blob/main/4.%20Data%20Analysis.sql)
 
-Data Visualization: Tableau
+Data Visualization: [Tableau](https://www.tableau.com/)
 
-I queried 2024_tripdata.cleaned_combined_data and created visualizations in Tableau, and observations are in the following:
+I queried 2024_tripdata.cleaned_combined_data and created visualizations in Tableau. Observations are in the following:
 
 1. The following slide shows the distribution of users during 2024.
     ![image](https://github.com/nevena-rogic/slike-case-study-1/blob/main/slika5.PNG)
 
    There are 63,79% of member users, and 36,21% of casual users.
    
-3. This slide shows the comparation of member and casual riders by the type of bikes they are using.
+3. This slide shows the comparation of member and casual users by the type of bikes have been used.
     ![image](https://github.com/nevena-rogic/slike-case-study-1/blob/main/slika4.PNG)
 
    The values displayed in these 3 charts represent the distribution of total trips, expressed as a percentage of the overall 
@@ -173,7 +173,7 @@ I queried 2024_tripdata.cleaned_combined_data and created visualizations in Tabl
    another in the late afternoon and early evening from around 4 PM to 7 PM. In contrast, the number of trips taken by casual riders 
    increases steadily throughout the day, reaching a peak in the early evening before declining afterward.
 
-   These observations suggest that members primarily use bikes for commuting to and from work on weekdays, whereas casual riders tend 
+   These observations suggest that members primarily use bikes for commuting to and from work on weekdays, whereas casual users tend 
    to ride throughout the day, especially on weekends, likely for leisure. Both groups show the highest activity levels during the 
    spring and summer months.
    
@@ -182,10 +182,10 @@ I queried 2024_tripdata.cleaned_combined_data and created visualizations in Tabl
    ![image](https://github.com/nevena-rogic/slike-case-study-1/blob/main/slika13.PNG)
    ![image](https://github.com/nevena-rogic/slike-case-study-1/blob/main/slika14.PNG)
 
-   It is important to note that casual riders generally cycle for longer periods than members on average. While the average ride 
-   duration for members remains relatively consistent throughout the year, week, and day, casual riders show more variation in their 
+   It is important to note that casual users generally cycle for longer periods than members on average. While the average ride 
+   duration for members remains relatively consistent throughout the year, week, and day, casual users show more variation in their 
    cycling patterns. They tend to have longer trips during the spring and summer months, on weekends, and between 10 AM and 2 PM each 
-   day. In contrast, casual riders take shorter trips between 5 AM and 8 AM.
+   day; in contrast, they take shorter trips between 5 AM and 8 AM.
 
 7. Next slides show the analysis of locations of starting and ending stations by users.
    ![image](https://github.com/nevena-rogic/slike-case-study-1/blob/main/slika18.PNG) ![image](https://github.com/nevena-rogic/slike-case-study-1/blob/main/slika19.PNG)
@@ -196,15 +196,15 @@ I queried 2024_tripdata.cleaned_combined_data and created visualizations in Tabl
 ## Act
 Based on the analysis of behavior of users, some marketing strategies for converting casual riders into members are as follows:
 
-1. **Seasonal Membership Offers**: Since casual riders are most active during the spring and summer months, discounted or special memberships could be offered during this period. 
+1. **Seasonal Membership Offers**: Since casual riders are most active during the spring and summer months, discounted or special memberships can be offered during this period. 
 
-2. **Weekend Promotions**: Casual riders tend to cycle more on weekends, so exclusive weekend deals could be introduced, such as "Weekend Rider Offer: Sign up for a membership this weekend and get 10% off for the first 3 months!".
+2. **Weekend Promotions**: Casual riders tend to cycle more on weekends, so exclusive weekend deals can be introduced, such as "Weekend Rider Offer: Sign up for a membership this weekend and get 10% off for the first 3 months!".
 
-3. **Location-Based Campaigns**: The data from the map can be used to target the most popular starting and ending locations. Location-based marketing campaigns could be implemented, offering promotions like "Join us at [popular location] and get a free ride or a discount on your first month of membership!" or setting up kiosks at these high-traffic areas where casual riders frequent.
+3. **Location-Based Campaigns**: The data from the map can be used to target the most popular starting and ending locations. Location-based marketing campaigns can be implemented, offering promotions like "Join us at [popular location] and get a free ride or a discount on your first month of membership!" or setting up kiosks at these high-traffic areas where casual riders frequent.
 
 4. **Membership Cards and Loyalty Programs**: A membership card that allows riders to collect points based on the number of trips or total ride duration can be introduced. Rewards such as free rides, discounts on renewals, or exclusive access to events can be offered. For example, "Earn points with every ride and unlock discounts or special perks with our membership card!"
 
-5. **Time-Sensitive Offers for Peak Hours**: Casual riders are more likely to ride in the early evening and between 10 am and 2 pm, so time-limited offers targeting those specific hours can be created. For example, "Sign up before 2 pm today and get a 20% discount on your membership for the next 3 months!" or "Ride during peak hours and get double points for membership rewards!".
+5. **Time-Sensitive Offers for Peak Hours**: Casual riders are more likely to ride in the early evening and between 10 AM and 2 PM, so time-limited offers targeting those specific hours can be created. For example, "Sign up before 2 PM today and get a 20% discount on your membership for the next 3 months!" or "Ride during peak hours and get double points for membership rewards!".
 
  
 
