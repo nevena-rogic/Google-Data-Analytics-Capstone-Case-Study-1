@@ -1,6 +1,6 @@
 --Data Exploration
 
---Checking for number of null values in all columns
+--checking for number of null values in all columns
 SELECT 
 	COUNT(CASE WHEN ride_id IS NULL then 1 END) AS ride_id_nulls,
 	COUNT(CASE WHEN rideable_type IS NULL then 1 END) AS  rideable_type_nulls,
@@ -18,13 +18,13 @@ SELECT
   FROM [2024_tripdata.combined_data]
 GO
 
---Checking for duplicate rows -211 rows found
+--checking for duplicate rows -211 rows found
 SELECT ride_id, COUNT(*) AS duplicate_count
 FROM [2024_tripdata.combined_data]
 GROUP BY ride_id
 HAVING COUNT(*)>1;
 
---Length of ride_id -all of the rows of column ride_id have the length of 16
+--length of ride_id -all of the rows of column ride_id have the length of 16
 SELECT 
     LEN(ride_id) AS text_length,
     COUNT(*) AS row_count
@@ -33,9 +33,6 @@ GROUP BY LEN(ride_id)
 ORDER BY text_length;
 
 --rideable_type -3 unique types of bikes
-electric_bike	2980595
-classic_bike	2735636
-electric_scooter	144337
 SELECT 
     rideable_type,
     COUNT(*) AS count
@@ -43,33 +40,29 @@ FROM [2024_tripdata.combined_data]
 GROUP BY rideable_type
 ORDER BY count DESC;
 
---Counting the number of rides longer then day and less then minute and longer then day
---rides_longer_than_a_day
-7490
+--counting the number of rides longer then day and less then minute and longer then day
+--rides_longer_than_a_day -7490
 SELECT 
     COUNT(*) AS rides_longer_than_a_day
 FROM [2024_tripdata.combined_data]
 WHERE DATEDIFF(HOUR, started_at, ended_at) > 24;
-rides_less_than_a_minute
-131256
+--rides_less_than_a_minute -131256
 SELECT 
     COUNT(*) AS rides_less_than_a_minute
 FROM [2024_tripdata.combined_data]
 WHERE DATEDIFF(SECOND, started_at, ended_at) < 60;
 
---Numbers of different staring stations by names -1809 stations
+--numbers of different staring stations by names -1809 stations
 SELECT DISTINCT start_station_name
 FROM [2024_tripdata.combined_data]
 ORDER BY start_station_name;
 
 --start_station_name, start_station_id -total 1073951 rows with start station name or id missing
-rows_with_start_station_null
-1073951
 SELECT COUNT(ride_id) AS rows_with_start_station_null          
 FROM [2024_tripdata.combined_data]
 WHERE start_station_name IS NULL OR start_station_id IS NULL;
 
---Numbers of different ending stations by names -1816 stations
+--numbers of different ending stations by names -1816 stations
 SELECT DISTINCT end_station_name
 FROM [2024_tripdata.combined_data]
 ORDER BY end_station_name;
@@ -90,9 +83,6 @@ FROM [2024_tripdata.combined_data]
 WHERE end_lat IS NULL OR end_lng IS NULL;
 
 --member_casual -2 unique types of members
-member_casual	count
-member	        3708910
-casual	        2151658
 SELECT 
     member_casual,
     COUNT(*) AS count
