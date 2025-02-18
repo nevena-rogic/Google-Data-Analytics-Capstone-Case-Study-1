@@ -198,15 +198,15 @@ I queried 2024_tripdata.cleaned_combined_data and did a visualization in Tableau
 ## Act
 Based on the analysis of behavior of users, some marketing strategies for converting casual riders into members are as follows::
 
-1. **Seasonal and Weekend Promotions**: Discounted membership rates or free trial periods could be offered during peak seasons (spring and summer) and weekends, when casual riders are most active. Special weekend-only offers or free ride days for new members could be provided to encourage sign-ups.
+1. **Seasonal Membership Offers**: Since casual riders are most active during the spring and summer months, discounted or special memberships could be offered during this period. 
 
-2. **Location-Based Campaigns**: The most popular riding areas are targeted, using insights from the map to provide promotions or set up sign-up booths in high-traffic locations. Collaborations with local businesses could be arranged to offer membership discounts or rewards.
+2. **Weekend Promotions**: Casual riders tend to cycle more on weekends, so exclusive weekend deals could be introduced, such as "Weekend Rider Offer: Sign up for a membership this weekend and get 10% off for the first 3 months!" or "Weekend Pass: Unlimited weekend rides for members with special perks like early-bird access to bikes."
 
-3. **Reward-Based Loyalty Program**: A points-based loyalty system could be introduced, allowing casual riders to earn points for each ride, which can be redeemed for membership discounts or free rides. Bonus points are awarded for converting to a full membership.
+3. **Location-Based Campaigns**: The data from the map can be used to target the most popular starting and ending locations. Location-based marketing campaigns could be implemented, offering promotions like "Join us at [popular location] and get a free ride or a discount on your first month of membership!" or setting up kiosks at these high-traffic areas where casual riders frequent.
 
-4. **Highlight Cost and Membership Benefits**: The long-term savings of membership could be promoted by comparing the cost of individual rides with membership fees. Exclusive perks such as priority bike access and longer ride durations are emphasized for members.
+4. **Membership Cards and Loyalty Programs**: A membership card that allows riders to collect points based on the number of trips or total ride duration can be introduced. Rewards such as free rides, discounts on renewals, or exclusive access to events can be offered. For example, "Earn points with every ride and unlock discounts or special perks with our membership card!"
 
-5. **Engaging Through Digital and Referral Campaigns**: Social media and email campaigns could be used to share success stories and limited-time offers. A referral program could be created where current members can earn rewards for referring casual riders, encouraging word-of-mouth promotion.
+5. **Time-Sensitive Offers for Peak Hours**: Casual riders are more likely to ride in the early evening and between 10 am and 2 pm, so time-limited offers targeting those specific hours can be created. For example, "Sign up before 2 pm today and get a 20% discount on your membership for the next 3 months!" or "Ride during peak hours and get double points for membership rewards!"
 
  
 
